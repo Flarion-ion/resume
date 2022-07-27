@@ -47,7 +47,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run build && git add docs/."
+      "pre-push": "npm run build && git add docs/. && git commit -am \"update docks\""
     }
   }
 }
