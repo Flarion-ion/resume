@@ -47,7 +47,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "ng build --prod"
+      "pre-push": "ng build"
     }
   }
 }
