@@ -1,1 +1,14 @@
-<p>login works!</p>
+<h1 class="d-flex justify-content-center">Войти</h1>
+<div class="content">
+  <div class="input-field">
+    <input type="email" placeholder="Email">
+  </div>
+  <div class="input-field">
+    <input type="pass" placeholder="PASSWORD">
+    <p>Хм, а нужно ли здесь входить?</p>
+  </div>
+  <div class="buttons">
+    <button>Войти</button>
+    <button (click)="login()">Войти как гость</button>
+  </div>
+</div>

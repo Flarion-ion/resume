@@ -1,1 +1,4 @@
-<app-login></app-login>
+<app-login *ngIf="!auth.isAuth; else mainpage" class="login-component"></app-login>
+<ng-template #mainpage>
+  <app-welcome class="welcome-component"></app-welcome>
+</ng-template>
