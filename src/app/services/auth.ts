@@ -1,5 +1,6 @@
 import { Injectable} from "@angular/core";
 import {environment} from "../../environments/environment";
+import {Subject} from "rxjs";
 
 
 @Injectable({
@@ -7,8 +8,10 @@ import {environment} from "../../environments/environment";
 })
 export class AuthService {
   isAuth = false;
+  isWelcome = new Subject<boolean>();
   constructor() {
     this.isAuth = environment.isAuthDefault;
+    this.isWelcome.next(false);
   }
 
 }

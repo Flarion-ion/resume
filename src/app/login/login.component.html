@@ -1,14 +1,15 @@
-<h1 class="d-flex justify-content-center">Войти</h1>
+<h1 class="d-flex justify-content-center">{{lang.get("login")}}</h1>
 <div class="content">
   <div class="input-field">
-    <input type="email" placeholder="Email">
+    <input type="email" placeholder="Email" [(ngModel)]="emailLabel">
   </div>
   <div class="input-field">
-    <input type="pass" placeholder="PASSWORD">
-    <p>Хм, а нужно ли здесь входить?</p>
+    <input type="password" placeholder="PASSWORD" [(ngModel)]="passLabel">
+    <p>{{lang.get("loginHelp")}}</p>
   </div>
   <div class="buttons">
-    <button>Войти</button>
-    <button (click)="login()">Войти как гость</button>
+    <button (click)="autoEnter()">{{lang.get("login")}}</button>
+    <button (click)="login()">{{lang.get("loginGuest")}}</button>
+    <button (click)="changeLang()">{{lang.nextLang()}}</button>
   </div>
 </div>

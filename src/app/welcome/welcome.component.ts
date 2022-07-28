@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {
   trigger,
   state,
@@ -7,6 +7,10 @@ import {
   transition,
   // ...
 } from '@angular/animations';
+import {AuthService} from "../services/auth";
+import {environment} from "../../environments/environment";
+import {LocaleService} from "../services/locale";
+import {TimeoutService} from "../services/timeout";
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
@@ -30,14 +34,22 @@ import {
   ]
 })
 export class WelcomeComponent implements AfterViewInit {
-  isWelcome = true;
-  constructor() { }
+  @Output() isCompelite: EventEmitter<boolean> = new EventEmitter();
+  isWelcome = false;
+  constructor(
+    public lang: LocaleService,
+    private wait: TimeoutService
+  ) {}
 
-  ngAfterViewInit(): void {
-    setTimeout( ()=> {
+  async ngAfterViewInit(){
+    if (!environment.isWelcomeDefault) {
+      await this.wait.timeout(1000);
+      this.isWelcome = true;
+      await this.wait.timeout(3000);
       this.isWelcome = false;
-      console.log(this.isWelcome)
-    }, 1000)
+      await this.wait.timeout(500);
+      this.isCompelite.emit(true);
+    }
   }
 
 }

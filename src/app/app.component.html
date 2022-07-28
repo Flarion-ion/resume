@@ -1,4 +1,7 @@
 <app-login *ngIf="!auth.isAuth; else mainpage" class="login-component"></app-login>
 <ng-template #mainpage>
-  <app-welcome class="welcome-component"></app-welcome>
+  <app-welcome (isCompelite)="loadApp($event)" class="welcome-component"></app-welcome>
 </ng-template>
+<div *ngIf="isInit">
+  <h1>main Page</h1>
+</div>
