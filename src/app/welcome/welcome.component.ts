@@ -42,12 +42,14 @@ export class WelcomeComponent implements AfterViewInit {
   ) {}
 
   async ngAfterViewInit(){
-    if (!environment.isWelcomeDefault) {
+    if (environment.isWelcomeDefault) {
       await this.wait.timeout(1000);
       this.isWelcome = true;
       await this.wait.timeout(3000);
       this.isWelcome = false;
       await this.wait.timeout(500);
+      this.isCompelite.emit(true);
+    } else {
       this.isCompelite.emit(true);
     }
   }

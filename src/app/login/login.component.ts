@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   login(){
-    this.auth.isAuth = true;
+    this.auth.isAuth = false;
   }
   changeLang(): void {
     this.lang.changeLang()
