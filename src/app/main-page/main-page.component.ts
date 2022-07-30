@@ -11,6 +11,7 @@ import {AboutComponent} from "../about/about.component";
 import {WorksComponent} from "../works/works.component";
 import {SkillsComponent} from "../skills/skills.component";
 import {ContactsComponent} from "../contacts/contacts.component";
+import {LocaleService} from "../services/locale";
 
 @Component({
   selector: 'app-main-page',
@@ -22,13 +23,15 @@ export class MainPageComponent implements AfterViewInit {
   @ViewChild('container', { read: ViewContainerRef })
   container!: ViewContainerRef;
   constructor(
-    private factory: ComponentFactoryResolver
+    private factory: ComponentFactoryResolver,
+    private locale: LocaleService
   ) { }
 
   ngAfterViewInit(): void {
     this.render()
   }
-  render(){
+  async render(){
+    await this.locale.waitInit()
     let component = this.factory.resolveComponentFactory(AboutComponent);
     switch (this.selected){
       case 1:

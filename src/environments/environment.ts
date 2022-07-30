@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  isAuthDefault: false,
-  isWelcomeDefault: false,
-  defaultLang: 'ru'
+  isAuthDefault: true,
+  isWelcomeDefault: true,
+  defaultLang: 'eng'
 };
 
 /*

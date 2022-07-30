@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {LocaleService} from "../services/locale";
 
 @Component({
   selector: 'app-skills',
@@ -7,7 +8,9 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
   @Output () event!: EventEmitter<number>;
-  constructor() { }
+  constructor(
+    public lang: LocaleService
+  ) { }
 
   ngOnInit(): void {
   }

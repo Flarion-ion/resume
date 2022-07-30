@@ -16,6 +16,9 @@ export class AppComponent implements OnInit{
   ) {}
 
   ngOnInit() {
+    this.init()
+  }
+  async init(){
     this.locale.init()
   }
   loadApp(event: boolean){
