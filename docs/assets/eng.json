@@ -1,0 +1,19 @@
+{
+  "hello": "Welcome.",
+  "login": "Sign in",
+  "loginGuest": "as guest",
+  "loginHelp": "Hmm, do I need to enter here?",
+  "fname": "Viktor Nikolaevich",
+  "post": "Developer",
+  "profile": "Profile",
+  "exp": "Work experience",
+  "company1": "IT Gas",
+  "company2": "IT Gas",
+  "post1": "Engineer-programmer",
+  "post2": "Leading Engineer-programmer",
+  "address": "Address",
+  "addressWhere": "Vitebsk Belarus",
+  "skills": "Skills",
+  "skill1": "Python",
+  "skill2": "Angular"
+}
