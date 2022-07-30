@@ -1,0 +1,166 @@
+.main {
+  height: 70%;
+}
+.photo{
+  height: 33vh;
+  width: 15vw;
+  min-width: 230px;
+  object-fit: cover;
+  margin: 20px;
+}
+
+@function calculateRootHeight ($width, $orientation: landscape) {
+  $heightPaddedRatio: 1.0;
+  $heightToWidth: 2/3;
+
+  @if ($orientation == "portrait") {
+    $heightToWidth: 3/2;
+  }
+
+  @debug "Orientation is '#{$orientation}'";
+  @return $heightPaddedRatio * $heightToWidth * $width;
+}
+
+.portrait {
+  height: calculateRootHeight(200px, portrait); /* Orientation is 'portrait' */
+}
+
+.landscape {
+  height: calculateRootHeight(200px); /* Orientation is 'landscape' */
+}
+.button-menu{
+  background-color:#262626;
+  @media (orientation: landscape){
+    //background-color: white;
+    min-width: 50px;
+    width: 10em;
+    height: 40em;
+    //margin: 35px auto;
+    margin-top: 5em;
+  }
+  @media (orientation: portrait) {
+    //background-color: gold;
+    position: absolute;
+    top: 50em;
+    left: 0;
+    width: 10em;
+    height: 50em;
+  }
+}
+.photo-place{
+  @media (orientation: landscape) {
+    background-color: #0a53be;
+    height: 80vh;
+    width: 30vw;
+  }
+  @media (orientation: portrait) {
+    background-color: #0a53be;
+    position: absolute;
+    top: 0;
+    height: 50em;
+    width: 100vw;
+  }
+}
+img{
+  overflow: hidden;
+  object-fit: cover;
+}
+.component-view{
+  @media (orientation: landscape) {
+    background-color: #0c4128;
+    width: 70vw;
+    height: 40em;
+    //margin: 35px auto;
+    margin-top: 5em;
+  }
+  @media (orientation: portrait) {
+    background-color: #0c4128;
+    position: absolute;
+    top: 50em;
+    margin-left: 10em;
+    height: 50em;
+    width: 50em;
+  }
+}
+.name{
+  color: white;
+  position: absolute;
+  @media (orientation: landscape) {
+    left: 25%;
+    bottom: 9em;
+  }
+  @media (orientation: portrait) {
+    top: 40em;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.container{
+  //height:100vh;
+  background-color:#262626;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  margin: 100% auto;
+}
+
+.social{
+  color:#fff;
+  list-style:none;
+  padding:0;
+  display:flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 450px;
+}
+
+.social-item{
+  height:70px;
+  width: 70px;
+  border-radius:50%;
+  border:5px solid #fff;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px; /*Размер иконки внутри*/
+  transition: all 1.5s;
+  margin: 20% auto;
+}
+
+a{
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+  color: inherit;
+}
+
+.facebook:hover{
+  border-color:#3c5998;
+  box-shadow:0px 0px 35px #3c5998;
+  color:#3c5998;
+}
+
+.instagram:hover{
+  box-shadow:0px 0px 35px ;
+  background:linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.telegram:hover{
+  border-color:#03A9F4;
+  box-shadow:0px 0px 35px #03A9F4;
+  color:#03A9F4;
+}
+
+.vk:hover{
+  border-color:#4a76a8;
+  box-shadow:0px 0px 35px #4a76a8;
+  color:#4a76a8;
+}
+
+.google:hover{
+  border-color:#ea4335;
+  box-shadow:0px 0px 35px #ea4335;
+  color:#ea4335;
+}
