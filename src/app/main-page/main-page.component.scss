@@ -106,13 +106,8 @@ img{
   align-items: center;
   margin: 100% auto;
   @media (orientation: portrait) {
-    top: 40em;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    height: 40em;
   }
-  height: 40em;
 }
 
 .social{
