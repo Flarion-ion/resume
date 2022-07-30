@@ -43,7 +43,7 @@
     position: absolute;
     top: 50em;
     left: 0;
-    width: 10em;
+    width: 5em;
     height: 50em;
   }
 }
@@ -78,9 +78,9 @@ img{
     background-color: #363636;
     position: absolute;
     top: 50em;
-    margin-left: 10em;
+    margin-left: 5em;
     height: 50em;
-    width: 50em;
+    width: 20em;
   }
 }
 .name{
@@ -105,6 +105,14 @@ img{
   justify-content:center;
   align-items: center;
   margin: 100% auto;
+  @media (orientation: portrait) {
+    top: 40em;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  height: 40em;
 }
 
 .social{
