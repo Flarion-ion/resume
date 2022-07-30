@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  isAuthDefault: false,
-  isWelcomeDefault: false,
+  isAuthDefault: true,
+  isWelcomeDefault: true,
   defaultLang: 'eng'
 };
