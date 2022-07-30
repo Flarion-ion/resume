@@ -66,16 +66,16 @@ img{
   object-fit: cover;
 }
 .component-view{
-  padding: 50px;
+  padding: 0;
+  //background-color: #363636;
   @media (orientation: landscape) {
-    background-color: #363636;
     width: 70vw;
     height: 40em;
     //margin: 35px auto;
     margin-top: 5em;
   }
   @media (orientation: portrait) {
-    background-color: #363636;
+
     position: absolute;
     top: 50em;
     margin-left: 5em;
@@ -168,4 +168,8 @@ a{
   border-color:#FF335E;
   box-shadow:0px 0px 35px #FF335E;
   color:#FF335E;
+}
+.animated-div{
+  padding: 50px;
+  background-color: #363636;
 }

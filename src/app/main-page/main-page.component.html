@@ -25,6 +25,8 @@
     </div>
   </div>
   <div class="d-flex justify-content-start component-view">
-    <ng-container #container></ng-container>
+    <div class="animated-div" [@start]="!isVisible ? 'begin' : 'end'">
+      <ng-container #container></ng-container>
+    </div>
   </div>
 </div>
