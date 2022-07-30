@@ -13,5 +13,4 @@ export class AuthService {
     this.isAuth = environment.isAuthDefault;
     this.isWelcome.next(false);
   }
-
 }

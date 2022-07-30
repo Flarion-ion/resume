@@ -33,13 +33,15 @@ export class LocaleService {
         this.waitResolve = true;
       })
   }
+
   async waitInit(){
-    if (this.waitResolve == false){
+    if (!this.waitResolve){
       await this.delay.timeout(50);
       return
     }
     return true;
   }
+
   get (phrase: string) {
     return this.phrases === undefined ? "" : this.phrases[phrase]
   }
