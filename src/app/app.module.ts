@@ -8,6 +8,12 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from "@angular/forms";
 import { MainPageComponent } from './main-page/main-page.component';
+import { AboutComponent } from './about/about.component';
+import { WorksComponent } from './works/works.component';
+import { SkillsComponent } from './skills/skills.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { CircleComponent } from './circle/circle.component';
+import { SkillComponent } from './skill/skill.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +21,12 @@ import { MainPageComponent } from './main-page/main-page.component';
     LoginComponent,
     WelcomeComponent,
     MainPageComponent,
+    AboutComponent,
+    WorksComponent,
+    SkillsComponent,
+    ContactsComponent,
+    CircleComponent,
+    SkillComponent,
   ],
   imports: [
     BrowserModule,

@@ -2,30 +2,17 @@
   <div class="button-menu">
     <div class="container">
       <ul class="social">
-        <li class="social-item facebook">
-          <a href="https://www.facebook.com/">
-            <i class="fa fa-facebook"></i>
-          </a>
+        <li class="social-item facebook" (click)="select(0)">
+            <i class="fa fa-info"></i>
         </li>
-        <li class="social-item instagram">
-          <a href="https://www.instagram.com/">
-            <i class="fa fa-instagram"></i>
-          </a>
+        <li class="social-item instagram" (click)="select(1)">
+            <i class="fa fa-bullhorn"></i>
         </li>
-        <li class="social-item telegram">
-          <a href="https://web.telegram.org/">
-            <i class="fa fa-telegram"></i>
-          </a>
+        <li class="social-item telegram" (click)="select(2)">
+            <i class="fa fa-user"></i>
         </li>
-        <li class="social-item vk">
-          <a href="https://vk.com/">
-            <i class="fa fa-vk"></i>
-          </a>
-        </li>
-        <li class="social-item google">
-          <a href="https://www.google.com/">
-            <i class="fa fa-google"></i>
-          </a>
+        <li class="social-item google" (click)="select(3)">
+            <i class="fa fa-address-book"></i>
         </li>
       </ul>
     </div>
@@ -38,6 +25,6 @@
     </div>
   </div>
   <div class="d-flex justify-content-start component-view">
-
+    <ng-container #container></ng-container>
   </div>
 </div>

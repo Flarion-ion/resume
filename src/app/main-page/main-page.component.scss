@@ -29,11 +29,11 @@
   height: calculateRootHeight(200px); /* Orientation is 'landscape' */
 }
 .button-menu{
-  background-color:#262626;
+  background-color:#363636;
   @media (orientation: landscape){
     //background-color: white;
     min-width: 50px;
-    width: 10em;
+    width: 18em;
     height: 40em;
     //margin: 35px auto;
     margin-top: 5em;
@@ -66,15 +66,16 @@ img{
   object-fit: cover;
 }
 .component-view{
+  padding: 50px;
   @media (orientation: landscape) {
-    background-color: #0c4128;
+    background-color: #363636;
     width: 70vw;
     height: 40em;
     //margin: 35px auto;
     margin-top: 5em;
   }
   @media (orientation: portrait) {
-    background-color: #0c4128;
+    background-color: #363636;
     position: absolute;
     top: 50em;
     margin-left: 10em;
@@ -99,7 +100,7 @@ img{
 }
 .container{
   //height:100vh;
-  background-color:#262626;
+  background-color:#363636;
   display:flex;
   justify-content:center;
   align-items: center;
@@ -107,7 +108,7 @@ img{
 }
 
 .social{
-  color:#fff;
+  color: #cd7cf5;
   list-style:none;
   padding:0;
   display:flex;
@@ -120,7 +121,7 @@ img{
   height:70px;
   width: 70px;
   border-radius:50%;
-  border:5px solid #fff;
+  border:5px solid #cd7cf5;
   display:flex;
   justify-content: center;
   align-items: center;
@@ -137,30 +138,31 @@ a{
 }
 
 .facebook:hover{
-  border-color:#3c5998;
-  box-shadow:0px 0px 35px #3c5998;
-  color:#3c5998;
+  border-color:#FF335E;
+  box-shadow:0px 0px 35px #FF335E;
+  color:#FF335E;
 }
 
 .instagram:hover{
-  box-shadow:0px 0px 35px ;
-  background:linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-color:#FF335E;
+  box-shadow:0px 0px 35px #FF335E;
+  color:#FF335E;
 }
 
 .telegram:hover{
-  border-color:#03A9F4;
-  box-shadow:0px 0px 35px #03A9F4;
-  color:#03A9F4;
+  border-color:#FF335E;
+  box-shadow:0px 0px 35px #FF335E;
+  color:#FF335E;
 }
 
 .vk:hover{
-  border-color:#4a76a8;
-  box-shadow:0px 0px 35px #4a76a8;
-  color:#4a76a8;
+  border-color:#FF335E;
+  box-shadow:0px 0px 35px #FF335E;
+  color:#FF335E;
 }
 
 .google:hover{
-  border-color:#ea4335;
-  box-shadow:0px 0px 35px #ea4335;
-  color:#ea4335;
+  border-color:#FF335E;
+  box-shadow:0px 0px 35px #FF335E;
+  color:#FF335E;
 }
